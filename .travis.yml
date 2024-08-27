@@ -16,3 +16,10 @@ after_success:
   - docker build -t scubawill/multi-server ./server 
   - docker build -t scubawill/multi-worker ./worker
 
+  # Log in to the Docker CLI and push images to the Docker Hub
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+
+  - docker push scubawill/multi-client
+  - docker push scubawill/multi-nginx
+  - docker push scubawill/multi-server
+  - docker push scubawill/multi-worker
