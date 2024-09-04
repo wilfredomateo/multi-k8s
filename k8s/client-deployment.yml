@@ -1,9 +1,9 @@
-apiVersion: apps/apps/v1
+apiVersion: apps/v1
 
 kind: Deployment
 
 metadata: 
-  name: client-Deployment
+  name: client-deployment
 
 spec:
   replicas: 3
@@ -12,7 +12,7 @@ spec:
       component: web
   template:
     metadata: 
-      label:
+      labels:
         component: web
     spec:
       containers:
