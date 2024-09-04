@@ -7,13 +7,16 @@ metadata:
 
 spec:
   replicas: 3
+  
   selector:
     matchLabels:
       component: web
+  
   template:
     metadata: 
       labels:
         component: web
+    
     spec:
       containers:
         - name: client

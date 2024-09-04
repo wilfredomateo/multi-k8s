@@ -7,13 +7,16 @@ metadata:
 
 spec: 
   replicas: 1
+  
   selector:
     matchLabels:
       component: worker 
+  
   template:
     metadata:
       labels: 
         component: worker 
+    
     spec:
       containers:
         - name: worker 

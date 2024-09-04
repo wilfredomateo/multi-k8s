@@ -7,8 +7,10 @@ metadata:
 
 spec:
   type: ClusterIP 
+  
   selector:
     component: server
+  
   ports:
     - port: 5000
       targetPort: 5000
