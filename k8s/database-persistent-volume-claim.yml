@@ -1,4 +1,4 @@
-apiVersion:
+apiVersion: v1
 
 kind: PersistentVolumeClaim
 
@@ -10,5 +10,5 @@ spec:
     - ReadWriteOnce
   
   resources:
-    request:
+    requests:
       storage: 2Gi
