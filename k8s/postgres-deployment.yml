@@ -26,6 +26,8 @@ spec:
           image: postgres 
           ports:
             - containerPort: 5432
+          env:
+            - name: POSTGRES_PASSWORD
           volumeMounts:
             - name: postgres-storage
               mountPath: /var/lib/postgressql/data
